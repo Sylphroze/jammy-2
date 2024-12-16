@@ -1,0 +1,74 @@
+/* Styles for Playlist component */
+.playlist {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 1rem auto;
+  background-color: var(--gunmetal);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px var(--shadow);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(234, 224, 213, 0.1);
+  transform: translateZ(0);
+}
+
+.playlist h2 {
+  color: var(--almond);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.playlist input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid var(--khaki);
+  font-size: 1.75rem;
+  color: var(--almond);
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.playlist input:focus {
+  border-color: var(--almond);
+  transform: translateY(-2px);
+}
+
+.playlist input::placeholder {
+  color: var(--khaki);
+  opacity: 0.7;
+}
+
+.playlist-save {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: var(--khaki);
+  color: var(--black);
+  border: none;
+  border-radius: 12px;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.playlist-save:hover {
+  background-color: var(--almond);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px var(--shadow);
+}
+
+.playlist-save:active {
+  transform: translateY(-1px);
+}
+
+.playlist-header {
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,70 @@
+/* Styles for SearchResults component */
+.search-results {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--gunmetal);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px var(--shadow);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(234, 224, 213, 0.1);
+    transform: translateZ(0);
+  }
+
+.track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  border-bottom: 1px solid rgba(234, 224, 213, 0.1);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.track:hover {
+  background-color: var(--highlight);
+  transform: translateX(8px);
+}
+
+.track-information {
+  flex-grow: 1;
+}
+
+.track-information h3 {
+  margin: 0;
+  color: var(--almond);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.track-information p {
+  margin: 0.5rem 0;
+  color: var(--khaki);
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.track-action {
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid var(--khaki);
+  color: var(--khaki);
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.track-action:hover {
+  background-color: var(--khaki);
+  color: var(--black);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(198, 172, 143, 0.3);
+}
+
+.track-list {
+  padding: 0 1rem;
+}

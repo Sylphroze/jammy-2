@@ -1,5 +1,19 @@
-.App {
-  text-align: center;
+:root {
+  /* Primary colors */
+  --almond: #eae0d5ff;
+  --khaki: #c6ac8fff;
+  
+  /* Background colors */
+  --black: #0a0908ff;
+  --gunmetal: #22333bff;
+  
+  /* Accent color */
+  --walnut-brown: #5e503fff;
+
+  /* Additional UI colors */
+  --overlay: rgba(10, 9, 8, 0.7);
+  --highlight: rgba(198, 172, 143, 0.15);
+  --shadow: rgba(0, 0, 0, 0.2);
 }
 
 .App-logo {
@@ -34,5 +48,58 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.App {
+  text-align: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: var(--black);
+  background-image: linear-gradient(145deg, var(--black), var(--gunmetal));
+  color: var(--almond);
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  perspective: 1000px;
+}
+
+h1 {
+  color: var(--almond);
+  margin-bottom: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--khaki);
+  border-radius: 2px;
+}
+
+@media (min-width: 1024px) {
+  .app-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .search-results,
+  .playlist {
+    width: 45%;
   }
 }

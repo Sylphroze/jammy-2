@@ -1,0 +1,17 @@
+/* Styles for Track component */
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #666;
+  }
+  
+  .track-information {
+    text-align: left;
+  }
+  
+  .track-action {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
