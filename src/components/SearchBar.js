@@ -4,12 +4,12 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, isSearching }) => {
   const [term, setTerm] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (term.trim()) {
+    if (term.trim() && !isSearching) {
       onSearch(term);
     }
   };
@@ -21,9 +21,14 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Search for a song, album, or artist"
         value={term}
         onChange={(e) => setTerm(e.target.value)}
+        disabled={isSearching}
       />
-      <button type="submit" className="search-button">
-        <span>Search</span>
+      <button 
+        type="submit" 
+        className={`search-button ${isSearching ? 'loading' : ''}`}
+        disabled={isSearching}
+      >
+        <span>{isSearching ? 'Searching...' : 'Search'}</span>
       </button>
     </form>
   );

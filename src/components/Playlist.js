@@ -5,7 +5,7 @@ import React from 'react';
 import TrackList from './TrackList';
 import './Playlist.css';
 
-const Playlist = ({ playlistName, playlistTracks, onNameChange, onRemove }) => {
+const Playlist = ({ playlistName, playlistTracks, onNameChange, onRemove, onSave, isSaving }) => {
   const handleNameChange = (event) => {
     onNameChange(event.target.value);
   };
@@ -16,13 +16,20 @@ const Playlist = ({ playlistName, playlistTracks, onNameChange, onRemove }) => {
         value={playlistName}
         onChange={handleNameChange}
         placeholder="New Playlist"
+        disabled={isSaving}
       />
       <TrackList 
         tracks={playlistTracks}
         onRemove={onRemove}
         isRemoval={true}
       />
-      <button className="playlist-save">SAVE TO SPOTIFY</button>
+      <button 
+        className={`playlist-save ${isSaving ? 'saving' : ''}`}
+        onClick={onSave}
+        disabled={isSaving}
+      >
+        {isSaving ? 'Saving...' : 'SAVE TO SPOTIFY'}
+      </button>
     </div>
   );
 };

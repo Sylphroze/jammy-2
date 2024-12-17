@@ -72,3 +72,14 @@
 .playlist-header {
   margin-bottom: 2rem;
 }
+
+.playlist-save.saving {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: var(--walnut-brown);
+}
+
+.playlist input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
